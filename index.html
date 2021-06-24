@@ -12,7 +12,178 @@
     <body>
         <!-- HEADER -->
         <header>
-            
+            <nav>
+                <a href="index.html">
+                    <p><img src="images/ohmyfood@2x.svg" alt="Ohmyfood"></p>
+                    </a>
+            </nav>
         </header>
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- LOCATION RESTAURANT -->
+            <form method="POST" action="traitement.php">
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <p>
+                    <input type="search" name="cities" value="Paris, Belleville" placeholder="Ville" maxlength="20" autofocus />
+                </p>
+            </form>
+
+            <!-- RESTAURANT PRESENTAION -->
+            <section>
+                <h2>
+                    Réserver le menu qui vous convient
+                </h2>
+                <P>
+                    Découvrez des restaurants d'exception, selectionnés par nos soins.
+                </P>
+                <a href="#restaurant-ancre"> 
+                    <button>
+                        <p>Explorer nos restaurants</p>
+                    </button>
+                </a>
+            </section>
+
+            <!-- USERS GUIDE -->
+            <section>
+                <header>
+                    <h2>
+                        Fonctionnement
+                    </h2>
+                </header>
+                <aside>
+                    <i class="fa-solid fa-circle-1"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>
+                        Choisissez un restaurant
+                    </h4>
+                </aside>
+                <aside>
+                    <i class="fa-solid fa-circle-2"></i>
+                    <i class="fas fa-list-ul"></i>
+                    <h4>
+                        Composez votre menu
+                    </h4>
+                </aside>
+                <aside>
+                    <i class="fa-solid fa-circle-3"></i>
+                    <i class="fas fa-store"></i>
+                    <h4>
+                        Déguster au restaurant
+                    </h4>
+                </aside>
+            </section>
+
+            <!--  RESTAURANT-->
+            <section id="restuarant-ancre">
+                <header>
+                    <h2>Restaurants</h2>
+                </header>
+                    <article>
+                        <a href="index_page_lapalette.html">
+                            <figure>
+                                <img src="images/laPaletteDuGout.jpg" alt="Restaurant la Palette du goût">
+                            </figure>
+                        </a>
+                        <div>
+                            <a>
+                                <div>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                            </a>
+                            <i class="far fa-heart cardContent__health"></i>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="index_page_laNote.html">
+                            <figure>
+                                <img src="images/laNoteEnchantee.jpg" alt="Restaurant la Note enchantée">
+                            </figure>
+                        </a>
+                        <div>
+                            <a>
+                                <div>
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </div>
+                            </a>
+                            <i class="far fa-heart cardContent__health"></i>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="index_page_aLaFrancaise.html">
+                            <figure>
+                                <img src="images/aLaFrançaise.jpg" alt="Restaurant à la française">
+                            </figure>
+                        </a>
+                        <div>
+                            <a>
+                                <div>
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </div>
+                            </a>
+                            <i class="far fa-heart cardContent__health"></i>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="index_page_leDelice.html">
+                            <figure>
+                                <img src="images/leDeliceDesSens.jpg" alt="Restaurant le délice des sens">
+                            </figure>
+                        </a>
+                        <div>
+                            <a>
+                                <div>
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                            </a>
+                            <i class="far fa-heart cardContent__health"></i>
+                        </div>
+                    </article>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div>
+                <a href="index.html">
+                    <p>
+                        <img src="images/ohmyfood_footer.png" alt="Ohmyfood">
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="index_contact.html"> 
+                    <p>
+                        <i class="fas fa-utensils"></i>
+                        Proposer un restaurant
+                    </p>
+                </a>
+                <a href="index_contact.html"> 
+                    <p>
+                        <i class="fas fa-hands-helping"></i>
+                        Devenir partenaire
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="index_mentionsLegales.html"> 
+                    <p>
+                        Mentions légales
+                    </p>
+                </a>
+                <a href="index_contact.html"> 
+                    <p>
+                        Contact
+                    </p>
+                </a>
+            </div>
+        </footer>
     </body>
 </html>

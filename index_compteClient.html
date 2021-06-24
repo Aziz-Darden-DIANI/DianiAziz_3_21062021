@@ -28,45 +28,31 @@
 
         <!-- MAIN -->
         <main>
-            
-            <!-- FORMULAIRE -->
-            <section>
-                <h2>
-                    Avez-vous une questions ?
-                </h2>
-                <p>
-                    N'hésitez pas à nous contacter
-                </p>
-            </section>
+
+            <!-- CONNEXION COMPTE CLIENT -->
             <form method="POST" action="traitement.php">
                 <fieldset>
                     <legend>
-                        Vos coordonnées
+                        S'identifier
                     </legend>
-                    <input type="text" name="YourName" placeholder="Votre nom" maxlength="30" autofocus required/>
-                    <input type="email" name="email" placeholder="Votre email" required />
+                    <input type="email" name="email" autofocus  required placeholder="Email" />
+                    <input type="password" name="pass" placeholder="Mot de passe" required />
+                    <input type="submit" value="Se connecter" />
+                    <a href="index_contact.html">
+                        <p>
+                            Mot de passe oublié ?
+                        </p>
+                    </a>
                 </fieldset>
-                <fieldset>
-                    <legend>
-                        Votre message
-                    </legend>
-                    <textarea name="message" placeholder="Message" rows="10" cols="48" required></textarea>
-                </fieldset>
-                <input type="checkbox" name="RGPD" id="RGPD"required />
-                <label for="RGPD">
-                    <p>
-                        Dans le but de ma demande personnelle via le formulaire, j'accepte à ce que mes données 
-                        soient utilisées afin de me recontacter.
-                    </p>
-                    <p>
-                        Vos informations ne seront en aucun cas conservées pour ds informations commerciales. 
-                        Pour en savoir plus sur vos droits, consultez notre politique de protection des données personnelle.
-                    </p>
-                </label>
-                <input type="submit" value="Envoyer" />
             </form>
+            <a href="index.html">
+                <button>
+                    <p>
+                        Retour à l'accueil
+                    </p>
+                </button>
         </main>
-
+            
         <!-- FOOTER -->
         <footer>
             <div>
