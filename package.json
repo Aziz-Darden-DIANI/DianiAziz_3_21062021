@@ -1,0 +1,22 @@
+{
+  "name": "dianiaziz_3_21062021",
+  "version": "1.0.0",
+  "description": "Projet 3 OC création site web restaurant V.Beta",
+  "main": "index.js",
+  "scripts": {
+    "sass" :"sass --watch ./sass/main.scss:public/css/mobile.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aziz-Darden-DIANI/DianiAziz_3_21062021.git"
+  },
+  "keywords": [
+    "aziz97"
+  ],
+  "author": "Aziz Darden DIANI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aziz-Darden-DIANI/DianiAziz_3_21062021/issues"
+  },
+  "homepage": "https://github.com/Aziz-Darden-DIANI/DianiAziz_3_21062021#readme"
+}

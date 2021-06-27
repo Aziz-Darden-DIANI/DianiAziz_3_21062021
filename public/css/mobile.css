@@ -1,1 +1,261 @@
+/* Base */
+@font-face {
+  font-family: Shrikhand-Regular;
+  src: url(/public/policies/Shrikhand-Regular.otf);
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(/public/policies/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(/public/policies/Roboto-Bold.ttf);
+}
+h2, h3, h4, h5, h6 {
+  font-family: "Roboto-Bold", Arial, "Arial Narrow", "Arial black", sans-serif;
+}
 
+p {
+  font-family: "Roboto-Regular", Arial, "Arial Narrow", "Arial black", sans-serif;
+}
+
+.headingPage--police {
+  font-family: "Shrikhand-Regular", Arial, "Arial Narrow", "Arial black", sans-serif;
+}
+
+body {
+  min-width: 250px;
+}
+
+/* -- Layouts Header --*/
+.headerMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerMain > nav {
+  display: flex;
+  justify-content: center;
+  flex-basis: 85%;
+}
+
+/* -- Layouts footer --*/
+footer {
+  background-color: #353535;
+  padding: 2rem;
+}
+footer .logo--dim {
+  width: 6.5rem;
+  margin-bottom: 1rem;
+}
+footer p {
+  color: white;
+}
+footer a {
+  text-decoration: none;
+}
+footer a p {
+  margin-block-end: 0.5em;
+  margin-block-start: 0.5em;
+}
+footer .alignTextIcon {
+  display: flex;
+  align-items: center;
+}
+footer .alignTextIcon p {
+  padding-left: 0.5rem;
+}
+footer .alignTextIcon--color {
+  color: white;
+}
+footer .alignTextIcon--dim {
+  width: 1rem;
+}
+
+/* Pages header-location*/
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5E5E5;
+}
+.location__alignIcon {
+  padding-right: 1rem;
+  margin-left: 4rem;
+}
+.location input {
+  background-color: #E5E5E5;
+  border: none;
+}
+
+/* Pages Home company description*/
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6F6F6;
+  padding: 1rem 2rem 3rem 2rem;
+}
+.description__textAlign {
+  text-align: center;
+}
+.description > p {
+  margin-top: -0.5em;
+  margin-bottom: 1.5rem;
+}
+.description--btnTxtSize {
+  font-size: 1.1em;
+}
+.description button {
+  background-color: #FF79DA;
+  border-radius: 2rem;
+  border: none;
+  color: white;
+  min-width: 12.5rem;
+}
+
+/* Pages Homme User Guide */
+.userGuide {
+  padding: 2rem 1rem;
+}
+.userGuide aside {
+  display: flex;
+  align-items: center;
+  background-color: #E5E5E5;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  max-width: 30rem;
+}
+.userGuide p {
+  margin: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  border-radius: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.userGuide i {
+  margin-left: 1.7rem;
+}
+.userGuide h4 {
+  font-size: 0.9em;
+  margin-left: 1.2rem;
+}
+
+/* Pages Homme restaurant */
+.restaurant {
+  padding: 2rem 1rem;
+  background-color: #f6F6F6;
+  /* TODO: demander comment center l'image et box-siting */
+}
+.restaurant article {
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0px 3px 6px 3px #E5E5E5;
+}
+.restaurant__containerImg {
+  height: 10.5rem;
+}
+.restaurant__imgDim {
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 100%;
+  width: 100%;
+}
+.restaurant__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.5rem 1.7rem 0.5rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.restaurant__name--lineSpacing {
+  line-height: 0.1;
+}
+
+/* layout pages restaurant*/
+.background-color {
+  background-color: #f6F6F6;
+}
+
+.cntnerImg--dim {
+  width: 100%;
+}
+
+.headingPage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.menu {
+  background-color: #f6F6F6;
+  border-radius: 2rem 2rem 0 0;
+  position: relative;
+  bottom: 3rem;
+}
+.menu__card {
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 2rem;
+}
+.menu__card--design {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0px 3px 6px 3px #E5E5E5;
+  border-radius: 1.5rem;
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem;
+}
+.menu__card--design > h4 {
+  margin-block-end: 0;
+}
+.menu__card > p {
+  border-bottom: 3px solid green;
+  width: 2.5rem;
+  height: 1.5rem;
+}
+.menu__cardAlign {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__cardAlign--textEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__cardAlign p {
+  margin-block-start: 0.5em;
+  font-size: 0.9em;
+}
+
+/* components button */
+.btn__align {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 2.5rem;
+}
+
+button {
+  background-color: #FF79DA;
+  border-radius: 2rem;
+  border: none;
+  color: white;
+  min-width: 9rem;
+}
+
+.fa-arrow-left {
+  text-decoration: none;
+  color: #242424;
+}
+.fa-arrow-left:hover {
+  color: #9356DC;
+}
+
+/*# sourceMappingURL=mobile.css.map */
