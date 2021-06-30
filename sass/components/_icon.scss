@@ -1,0 +1,7 @@
+.fa-arrow-left {
+    text-decoration: none;
+    color: #242424;
+    &:hover {
+        color: $primary-color;
+    }
+}

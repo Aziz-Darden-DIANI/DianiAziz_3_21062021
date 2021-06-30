@@ -1,0 +1,52 @@
+/* Pages restaurant*/
+.background-color {
+    background-color: $primary-backgroud-color;
+}
+.cntnerImg--dim {
+    width: 100%;
+}
+.headingPage {
+    @include flexbox-center-ver();
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+}
+.menu {
+    background-color: $primary-backgroud-color;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    bottom: 3rem;
+    &__card {
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 2rem;
+        &--design {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            @include shdw-cntner();
+            border-radius: 1.5rem;
+            margin: 1rem 0 1rem 0;
+            padding: 0 1rem;
+            > h4 {
+                margin-block-end: 0;
+            }
+        }
+        > p {
+            border-bottom: 3px solid green;
+            width: 2.5rem;
+            height: 1.5rem;
+        }
+    }
+    &__cardAlign {
+        display: flex;
+        justify-content: space-between;
+        &--textEllipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p {
+            margin-block-start: 0.5em;
+            font-size: map-get($map: $font-size, $key: paragraph);
+        }
+    }
+}

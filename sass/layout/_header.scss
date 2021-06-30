@@ -1,0 +1,7 @@
+.headerMain {
+    @include flexbox-center-hor-ver();
+    >nav {
+        @include flexbox-center-hor();
+        flex-basis: 85%;
+    }
+}

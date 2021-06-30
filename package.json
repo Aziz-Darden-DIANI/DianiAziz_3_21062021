@@ -4,7 +4,7 @@
   "description": "Projet 3 OC création site web restaurant V.Beta",
   "main": "index.js",
   "scripts": {
-    "sass" :"sass --watch ./sass/main.scss:public/css/mobile.css --style expanded"
+    "sass" :"sass --watch ./sass/main.scss:public/css/style.css --style expanded"
   },
   "repository": {
     "type": "git",

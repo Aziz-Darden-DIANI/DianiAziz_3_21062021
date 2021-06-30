@@ -1,0 +1,30 @@
+@mixin flexbox-center-hor {
+    display: flex;
+    justify-content: center;
+}
+@mixin flexbox-center-hor-ver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexbox-center-ver {
+    display: flex;
+    align-items: center;
+}
+@mixin flexbox-column-cntr-hor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin btn ($colour : $secondary-color){
+    background-color: $colour;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+}
+@mixin padding-section {
+    padding : 2rem 1rem;
+}
+@mixin shdw-cntner ($colour: $secondary-background-color, $size: $shadow-size) {
+    box-shadow: 0px $size 6px $size $colour;
+}

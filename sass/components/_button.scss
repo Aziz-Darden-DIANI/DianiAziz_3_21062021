@@ -1,0 +1,9 @@
+.btn__align {
+    @include flexbox-center-hor();
+    position: relative;
+    bottom: 2.5rem;
+}
+button {
+    @include btn();
+    min-width: 9rem;
+}

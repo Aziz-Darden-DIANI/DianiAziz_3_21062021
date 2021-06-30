@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Shrikhand-Regular;
+    src: url(/public/policies/Shrikhand-Regular.otf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(/public/policies/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(/public/policies/Roboto-Bold.ttf);
+}
+h2, h3, h4, h5, h6 {
+    font-family: 'Roboto-Bold' , Arial , 'Arial Narrow', "Arial black", sans-serif;
+}
+p {
+    font-family: 'Roboto-Regular', Arial , 'Arial Narrow', "Arial black", sans-serif;
+}
+.headingPage--police {
+    font-family: 'Shrikhand-Regular', Arial , 'Arial Narrow', "Arial black", sans-serif;
+}

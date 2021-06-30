@@ -1,0 +1,93 @@
+/* Header Location */
+.location {
+    @include flexbox-center-hor-ver();
+    background-color: $secondary-background-color;
+    &__alignIcon {
+        padding-right: 1rem;
+        margin-left: 4rem;
+    }
+    input {
+        background-color: $secondary-background-color;
+        border: none;
+    }
+}
+
+/*company Description*/
+.description {
+    @include flexbox-column-cntr-hor();
+    background-color: $primary-backgroud-color;
+    padding: 1rem 2rem 3rem 2rem;
+    &__textAlign {
+        text-align: center;
+    }
+    > p {
+        margin-top: -0.5em;
+        margin-bottom: 1.5rem;
+    }
+    &--btnTxtSize {
+        font-size: map-get($map: $font-size , $key: bthtxt);
+    }
+    button {
+        @include btn();
+        min-width: 12.5rem;
+    }
+}
+
+/* User Guide */
+.userGuide {
+    @include padding-section();
+    aside {
+        @include flexbox-center-ver();
+        background-color: $secondary-background-color;
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        border-radius: 1.5rem;
+        max-width: 30rem;
+    }
+    p {
+        margin: -0.5rem;
+        @include flexbox-center-hor-ver();
+        background-color: $primary-color;
+        border-radius: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    i {
+        margin-left: 1.7rem;
+    }
+    h4 {
+        font-size: map-get($map: $font-size , $key: title);
+        margin-left: 1.2rem;
+    }
+}
+
+/* Restaurant */
+.restaurant {
+    @include padding-section();
+    background-color: $primary-backgroud-color;
+    article {
+        border-radius: 1rem;
+        margin-bottom: 1.2rem;
+        @include shdw-cntner();
+    }
+    &__containerImg {
+        height: 10.5rem;
+    }
+    /* TODO: demander comment center l'image et box-siting */
+    &__imgDim {
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+        height: 100%;
+        width: 100%;
+    }
+    &__name {
+        @include flexbox-center-ver();
+        justify-content: space-between;
+        background-color: white;
+        padding: 0.5rem 1.7rem 0.5rem 1rem; 
+        border-radius: 0 0 1rem 1rem;
+        &--lineSpacing {
+            line-height: 0.1;
+        }
+    }
+}
