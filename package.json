@@ -4,7 +4,8 @@
   "description": "Projet 3 OC création site web restaurant V.Beta",
   "main": "index.js",
   "scripts": {
-    "sass" :"sass --watch ./sass/main.scss:public/css/style.css --style expanded"
+    "sass" :"sass --watch ./sass/main.scss:public/css/style.css --style expanded",
+    "prefix" :"postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   ],
   "author": "Aziz Darden DIANI",
   "license": "ISC",
+  "browserslist" :"last 4 versions",
   "bugs": {
     "url": "https://github.com/Aziz-Darden-DIANI/DianiAziz_3_21062021/issues"
   },

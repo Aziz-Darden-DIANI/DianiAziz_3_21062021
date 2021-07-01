@@ -194,6 +194,7 @@ footer .alignTextIcon--dim {
 /* User Guide */
 .userGuide {
   padding: 2rem 1rem;
+  margin-bottom: 2rem;
 }
 .userGuide aside {
   display: flex;
@@ -202,7 +203,6 @@ footer .alignTextIcon--dim {
   margin-top: 1rem;
   padding: 0.5rem 0;
   border-radius: 1.5rem;
-  max-width: 30rem;
 }
 .userGuide p {
   margin: -0.5rem;
@@ -254,4 +254,81 @@ footer .alignTextIcon--dim {
   line-height: 0.1;
 }
 
-/*# sourceMappingURL=mobile.css.map */
+/* home USER GUIDE */
+@media screen and (min-width: 770px) {
+  .desktop-flexbox {
+    display: flex;
+  }
+  .desktop-flexbox .description {
+    flex-basis: 50%;
+    background-color: white;
+    justify-content: center;
+    border-right: solid 1px #E5E5E5;
+  }
+  .desktop-flexbox .userGuide {
+    flex-basis: 50%;
+    padding-left: 2rem;
+  }
+  .desktop-flexbox .userGuide aside {
+    max-width: 30rem;
+  }
+}
+
+/* home RESTAURANT */
+@media screen and (min-width: 770px) {
+  .restaurant {
+    border-top: solid 1px #E5E5E5;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .restaurant__flexDesktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurant__flexDesktop article {
+    flex-basis: 47%;
+  }
+}
+
+/* FOOTER */
+@media screen and (min-width: 770px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .logo--dim {
+    margin-bottom: 0;
+    margin-top: 0.3rem;
+  }
+}
+
+/* Page Restau MENU */
+@media screen and (min-width: 1000px) {
+  .cntnerImg--dim {
+    height: 30rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menu {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .menu__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu__card {
+    width: 25rem;
+  }
+  .menu__cardAlign--textEllipsis {
+    white-space: pre-wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

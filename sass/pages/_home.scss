@@ -36,13 +36,13 @@
 /* User Guide */
 .userGuide {
     @include padding-section();
+    margin-bottom: 2rem;
     aside {
         @include flexbox-center-ver();
         background-color: $secondary-background-color;
         margin-top: 1rem;
         padding: 0.5rem 0;
         border-radius: 1.5rem;
-        max-width: 30rem;
     }
     p {
         margin: -0.5rem;

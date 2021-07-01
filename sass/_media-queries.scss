@@ -1,0 +1,78 @@
+/* home USER GUIDE */
+
+.desktop-flexbox {
+    @include tablette-only {
+        display: flex;
+        
+        .description {
+            flex-basis: 50%;
+            background-color: white;
+            justify-content: center;
+            border-right: solid 1px $secondary-background-color;
+        }
+        .userGuide {
+            flex-basis: 50%;
+            padding-left: 2rem;
+            aside {
+                max-width: 30rem;
+            }
+        }
+    }
+}
+
+/* home RESTAURANT */
+.restaurant {
+    @include tablette-only {
+        border-top: solid 1px $secondary-background-color;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        &__flexDesktop {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           article {
+               flex-basis: 47%;
+           }
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    @include tablette-only {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo--dim {
+            margin-bottom: 0;
+            margin-top: 0.3rem;
+        }
+    }
+}
+
+/* Page Restau MENU */
+.cntnerImg--dim {
+    @include desktop-only {
+        height: 30rem;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    @include desktop-only {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        &__flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__card {
+            width: 25rem;
+        }
+        &__cardAlign--textEllipsis {
+            white-space: pre-wrap;
+        }
+    }
+}

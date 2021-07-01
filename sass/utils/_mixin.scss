@@ -28,3 +28,13 @@
 @mixin shdw-cntner ($colour: $secondary-background-color, $size: $shadow-size) {
     box-shadow: 0px $size 6px $size $colour;
 }
+@mixin desktop-only {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop )) {
+        @content;
+    }
+}
+@mixin tablette-only {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tablette)) {
+        @content;
+    }
+}
