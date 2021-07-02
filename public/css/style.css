@@ -11,7 +11,7 @@
   src: url(/public/policies/Roboto-Bold.ttf);
 }
 h2, h3, h4, h5, h6 {
-  font-family: "Roboto-Bold", Arial, "Arial Narrow", "Arial black", sans-serif;
+  font-family: "Roboto-Regular", Arial, "Arial Narrow", "Arial black", sans-serif;
 }
 
 p {
@@ -24,6 +24,8 @@ p {
 
 body {
   min-width: 250px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .btn__align {
@@ -255,7 +257,7 @@ footer .alignTextIcon--dim {
 }
 
 /* home USER GUIDE */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 765px) {
   .desktop-flexbox {
     display: flex;
   }
@@ -275,7 +277,7 @@ footer .alignTextIcon--dim {
 }
 
 /* home RESTAURANT */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 765px) {
   .restaurant {
     border-top: solid 1px #E5E5E5;
     padding-left: 4rem;
@@ -292,7 +294,7 @@ footer .alignTextIcon--dim {
 }
 
 /* FOOTER */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 765px) {
   footer {
     display: flex;
     justify-content: space-around;
@@ -318,16 +320,19 @@ footer .alignTextIcon--dim {
     padding-right: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    /*&__cardAlign--textEllipsis {
+        white-space: nowrap;
+    }*/
   }
   .menu__flex {
     display: flex;
     justify-content: space-between;
   }
   .menu__card {
-    width: 25rem;
+    width: 27%;
   }
-  .menu__cardAlign--textEllipsis {
-    white-space: pre-wrap;
+  .menu__card--design, .menu__cardAlign {
+    width: 100%;
   }
 }
 

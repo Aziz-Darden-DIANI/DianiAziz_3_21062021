@@ -1,7 +1,7 @@
 /* home USER GUIDE */
 
 .desktop-flexbox {
-    @include tablette-only {
+    @include tablette-desktop {
         display: flex;
         
         .description {
@@ -22,7 +22,7 @@
 
 /* home RESTAURANT */
 .restaurant {
-    @include tablette-only {
+    @include tablette-desktop {
         border-top: solid 1px $secondary-background-color;
         padding-left: 4rem;
         padding-right: 4rem;
@@ -39,7 +39,7 @@
 
 /* FOOTER */
 footer {
-    @include tablette-only {
+    @include tablette-desktop {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -69,10 +69,13 @@ footer {
             justify-content: space-between;
         }
         &__card {
-            width: 25rem;
+            width: 27%;
+            &--design, &Align {
+                width: 100%;
+            }
         }
-        &__cardAlign--textEllipsis {
-            white-space: pre-wrap;
-        }
+        /*&__cardAlign--textEllipsis {
+            white-space: nowrap;
+        }*/
     }
 }
