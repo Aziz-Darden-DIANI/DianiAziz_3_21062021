@@ -82,18 +82,22 @@
         @include shadow-container();
     }
     &__containerImg {
+        position: relative;
         height: 10.5rem;
     }
-    /*&__new {
+    &__new {
         position: absolute;
         top: 1rem;
-        right: 1rem;
-        background-color: #99e2d0;
-        color: #39a98e;
+        right: 0.75rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.125rem;
+        color: #1b6150;
+        background-color: $tertiary-color;
         font-weight: bold;
-        padding: .5rem;
-    }*/
-    /* TODO: demander comment center l'image et box-siting */
+        font-size: 0.8em;
+        text-decoration: none;
+    }
+    
     &__imgDim {
         object-fit: cover;
         border-radius: 1rem 1rem 0 0;

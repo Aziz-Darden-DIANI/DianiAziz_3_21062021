@@ -23,7 +23,7 @@
     &::before {
         transition: background-image 5s ease-in-out;
     }
-    &:hover {
+    &:active {
         &::before {
             font-weight: bold;
             background-image: linear-gradient($deg ,$primary-color,$secondary-color);

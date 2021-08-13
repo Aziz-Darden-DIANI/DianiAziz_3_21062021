@@ -13,7 +13,6 @@
         
         .description {
             flex-basis: 50%;
-            background-color: white;
             justify-content: center;
             border-right: solid 1px $secondary-background-color;
         }
@@ -40,6 +39,21 @@
            article {
                flex-basis: 47%;
            }
+        }
+    }
+}
+
+/* icon favoris */
+.fa-heart {
+    @include desktop-only {
+        &:hover {
+            &::before {
+                font-weight: bold;
+                background-image: linear-gradient($deg ,$primary-color,$secondary-color);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 }
@@ -81,8 +95,19 @@ footer {
                 width: 100%;
             }
         }
-        /*&__cardAlign--textEllipsis {
-            white-space: nowrap;
-        }*/
     }
+}
+.menu__card--design:hover {
+    @include desktop-only {
+        > .menu__cardPrice {
+            margin-right: 2rem;
+            transform: translateX(15px);
+         }
+         > .menu__cardConfirmation {
+             transform: translateX(0);
+         }
+         .menu__cardConfirmation--rot {
+             transform: rotate(0);
+         }
+     }
 }

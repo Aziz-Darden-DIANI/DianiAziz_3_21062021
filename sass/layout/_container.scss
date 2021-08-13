@@ -4,6 +4,7 @@
 }
 .cntnerImg--dim {
     width: 100%;
+    height: 100%;
 }
 .headingPage {
     @include flexbox-center-ver();
@@ -21,13 +22,13 @@
         &--design {
             display: flex;
             align-items: center;
-            justify-content: space-between;
             background-color: white;
             @include shadow-container();
             border-radius: 1.5rem;
             margin: 1rem 0 1rem 0;
-            padding: 0 1rem;
+            padding: 0 0 0 1rem;
             cursor: pointer;
+            overflow: hidden;
             
             /*animmation menu*/
             animation: anim-menu $animMenu-duree ease-in-out;
@@ -43,12 +44,15 @@
                 animation-delay: $animMenu-delay * 10;
             }
             &:active {
-                > .menu__cardConfirmation {
-                    
-                    transform: scale(1.5)
-                }
                 > .menu__cardPrice {
-                    transform: translateX(15.5px);
+                   margin-right: 2rem;
+                   transform: translateX(15px);
+                }
+                > .menu__cardConfirmation {
+                    transform: translateX(0);
+                }
+                .menu__cardConfirmation--rot {
+                    transform: rotate(0);
                 }
             }
         }
@@ -78,12 +82,29 @@
     }
     &__cardPrice {
         align-self: flex-end;
-        transition: transform 400ms ease-out;
+        margin-right: 1.2rem;
+        transform: translateX(65px);
+        transition: all 400ms ease-in-out;
     }
     &__cardConfirmation {
         background-color: $tertiary-color;
         border-radius: 0 1.5rem 1.5rem 0;
-        transform: scale(2);
-        transition: transform 400ms ease-out;
+        padding: 1.6rem 1.5rem;
+        transform: translateX(75px);
+        transition: all 400ms ease-out;
+        &--rot {
+            height: 1.6rem;
+            width: 1.6rem;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            transform: rotate(180deg);
+            transition: all 500ms ease-out;
+        }
+        .fa-check {
+            color: $tertiary-color;
+        }
     }
 }
