@@ -18,14 +18,39 @@
 }
 @mixin btn ($colour : $secondary-color){
     background-color: $colour;
+    background: linear-gradient($deg, $primary-color, $secondary-color);
     border-radius: 2rem;
+    cursor: pointer;
     border: none;
     color: white;
+    position: relative;
+    z-index: 1;
+}
+@mixin btn--hover() {
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 2rem;
+        background: linear-gradient($deg, lighten($primary-color, $light), lighten($secondary-color, $light));
+        top: 0rem;
+        right: 0rem;
+        left: 0rem;
+        bottom: 0rem;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+            @include shadow-container($colour: rgba(0,0,0,.5));
+        }
+    }
 }
 @mixin padding-section {
     padding : 2rem 1rem;
 }
-@mixin shdw-cntner ($colour: $secondary-background-color, $size: $shadow-size) {
+@mixin shadow-container ($colour: $secondary-background-color, $size: $shadow-size) {
     box-shadow: 0px $size 6px $size $colour;
 }
 @mixin desktop-only {

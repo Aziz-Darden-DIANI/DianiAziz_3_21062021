@@ -9,6 +9,7 @@
     input {
         background-color: $secondary-background-color;
         border: none;
+        outline:none;
     }
 }
 
@@ -30,6 +31,7 @@
     button {
         @include btn();
         min-width: 12.5rem;
+        @include btn--hover;
     }
 }
 
@@ -39,15 +41,24 @@
     margin-bottom: 2rem;
     aside {
         @include flexbox-center-ver();
-        background-color: $secondary-background-color;
+        @include shadow-container();
+        background-color: $primary-backgroud-color;
         margin-top: 1rem;
         padding: 0.5rem 0;
         border-radius: 1.5rem;
+        cursor: pointer;
+        &:hover {
+            background-color: #f5edff;
+            & > .fa-mobile-alt {
+                color: $primary-color;
+            }
+        }
     }
     p {
         margin: -0.5rem;
         @include flexbox-center-hor-ver();
         background-color: $primary-color;
+        color: white;
         border-radius: 1.5rem;
         width: 1.5rem;
         height: 1.5rem;
@@ -68,11 +79,20 @@
     article {
         border-radius: 1rem;
         margin-bottom: 1.2rem;
-        @include shdw-cntner();
+        @include shadow-container();
     }
     &__containerImg {
         height: 10.5rem;
     }
+    /*&__new {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #99e2d0;
+        color: #39a98e;
+        font-weight: bold;
+        padding: .5rem;
+    }*/
     /* TODO: demander comment center l'image et box-siting */
     &__imgDim {
         object-fit: cover;

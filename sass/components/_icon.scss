@@ -1,7 +1,35 @@
+/*icon header*/
 .fa-arrow-left {
     text-decoration: none;
     color: #242424;
     &:hover {
         color: $primary-color;
+    }
+}
+
+/*icon userGuide*/
+.fa-mobile-alt {
+    color: #8d8d8d;
+}
+.fa-list-ul {
+    @extend .fa-mobile-alt;
+}
+.fa-store {
+    @extend .fa-mobile-alt;
+}
+
+/*icon like*/
+.fa-heart {
+    &::before {
+        transition: background-image 5s ease-in-out;
+    }
+    &:hover {
+        &::before {
+            font-weight: bold;
+            background-image: linear-gradient($deg ,$primary-color,$secondary-color);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }

@@ -6,4 +6,5 @@
 button {
     @include btn();
     min-width: 9rem;
+    @include btn--hover;
 }

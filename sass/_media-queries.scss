@@ -1,5 +1,12 @@
-/* home USER GUIDE */
+/*home loading-spinner*/
+.load {
+    @include tablette-desktop {
+        width: $size-load*8.5;
+        height: $size-load*6;
+    }
+}
 
+/* home USER GUIDE */
 .desktop-flexbox {
     @include tablette-desktop {
         display: flex;

@@ -1,0 +1,30 @@
+/*annimation loading spinner*/
+@keyframes back-loading {
+    0%,100% {
+        z-index: 1;
+        background-color: #242424;
+        opacity: 0.8;
+    }
+}
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1.0)
+    }
+}
+
+/* ANimation pages menu */
+@keyframes anim-menu {
+    0% {
+        transform: scale(0);
+    }
+    90% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: sacale(1);
+    }
+}

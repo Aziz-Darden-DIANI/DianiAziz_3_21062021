@@ -1,3 +1,89 @@
+/*annimation loading spinner*/
+@keyframes back-loading {
+  0%, 100% {
+    z-index: 1;
+    background-color: #242424;
+    opacity: 0.8;
+  }
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/* ANimation pages menu */
+@keyframes anim-menu {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: sacale(1);
+  }
+}
+/* creation loading spinner*/
+.container__load {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  animation: back-loading 2000ms;
+}
+
+.load {
+  width: 19.5vh;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  position: fixed;
+  top: 0em;
+  right: 0em;
+  left: 0em;
+  bottom: 0em;
+}
+.load__bar {
+  height: 100%;
+  width: 3vh;
+  animation: bars 500ms;
+  animation-delay: 150ms;
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.load__bar--1 {
+  animation-delay: 100ms;
+}
+.load__bar--2 {
+  animation-delay: 200ms;
+}
+.load__bar--3 {
+  animation-delay: 300ms;
+}
+.load__bar--4 {
+  animation-delay: 400ms;
+}
+.load__bar--5 {
+  animation-delay: 500ms;
+}
+.load--colorPrimary {
+  background-color: #9356DC;
+}
+.load--colorSecondary {
+  background-color: #FF79DA;
+}
+.load--colorTertiary {
+  background-color: #99E2D0;
+}
+
 @font-face {
   font-family: Shrikhand-Regular;
   src: url(/public/policies/Shrikhand-Regular.otf);
@@ -37,18 +123,57 @@ body {
 
 button {
   background-color: #FF79DA;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
   border-radius: 2rem;
+  cursor: pointer;
   border: none;
   color: white;
+  position: relative;
+  z-index: 1;
   min-width: 9rem;
 }
+button::after {
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  background: linear-gradient(-5deg, #a16be0, #ff93e1);
+  top: 0rem;
+  right: 0rem;
+  left: 0rem;
+  bottom: 0rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+button:hover::after {
+  opacity: 1;
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.5);
+}
 
+/*icon header*/
 .fa-arrow-left {
   text-decoration: none;
   color: #242424;
 }
 .fa-arrow-left:hover {
   color: #9356DC;
+}
+
+/*icon userGuide*/
+.fa-mobile-alt, .fa-store, .fa-list-ul {
+  color: #8d8d8d;
+}
+
+/*icon like*/
+.fa-heart::before {
+  transition: background-image 5s ease-in-out;
+}
+.fa-heart:hover::before {
+  font-weight: bold;
+  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .headerMain {
@@ -122,33 +247,88 @@ footer .alignTextIcon--dim {
 }
 .menu__card--design {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
-  box-shadow: 0px 3px 6px 3px #E5E5E5;
+  box-shadow: 0px 3px 6px 3px #eaeaea;
   border-radius: 1.5rem;
   margin: 1rem 0 1rem 0;
   padding: 0 1rem;
+  cursor: pointer;
+  /*animmation menu*/
+  animation: anim-menu 800ms ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-delay: 1000ms;
 }
-.menu__card--design > h4 {
-  margin-block-end: 0;
+.menu__card--design--1 {
+  animation-delay: 72ms;
+}
+.menu__card--design--2 {
+  animation-delay: 144ms;
+}
+.menu__card--design--3 {
+  animation-delay: 216ms;
+}
+.menu__card--design--4 {
+  animation-delay: 288ms;
+}
+.menu__card--design--5 {
+  animation-delay: 360ms;
+}
+.menu__card--design--6 {
+  animation-delay: 432ms;
+}
+.menu__card--design--7 {
+  animation-delay: 504ms;
+}
+.menu__card--design--8 {
+  animation-delay: 576ms;
+}
+.menu__card--design--9 {
+  animation-delay: 648ms;
+}
+.menu__card--design--10 {
+  animation-delay: 720ms;
+}
+.menu__card--design:active > .menu__cardConfirmation {
+  transform: scale(1.5);
+}
+.menu__card--design:active > .menu__cardPrice {
+  transform: translateX(15.5px);
 }
 .menu__card > p {
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid #99E2D0;
   width: 2.5rem;
   height: 1.5rem;
 }
 .menu__cardAlign {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 2;
 }
 .menu__cardAlign--textEllipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.menu__cardAlign > h4 {
+  margin-block-end: -0.3em;
+}
 .menu__cardAlign p {
   margin-block-start: 0.5em;
   font-size: 0.9em;
+}
+.menu__cardPrice {
+  align-self: flex-end;
+  transition: transform 400ms ease-out;
+}
+.menu__cardConfirmation {
+  background-color: #99E2D0;
+  border-radius: 0 1.5rem 1.5rem 0;
+  transform: scale(2);
+  transition: transform 400ms ease-out;
 }
 
 /* Header Location */
@@ -156,15 +336,16 @@ footer .alignTextIcon--dim {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E5E5E5;
+  background-color: #eaeaea;
 }
 .location__alignIcon {
   padding-right: 1rem;
   margin-left: 4rem;
 }
 .location input {
-  background-color: #E5E5E5;
+  background-color: #eaeaea;
   border: none;
+  outline: none;
 }
 
 /*company Description*/
@@ -187,10 +368,31 @@ footer .alignTextIcon--dim {
 }
 .description button {
   background-color: #FF79DA;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
   border-radius: 2rem;
+  cursor: pointer;
   border: none;
   color: white;
+  position: relative;
+  z-index: 1;
   min-width: 12.5rem;
+}
+.description button::after {
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  background: linear-gradient(-5deg, #a16be0, #ff93e1);
+  top: 0rem;
+  right: 0rem;
+  left: 0rem;
+  bottom: 0rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+.description button:hover::after {
+  opacity: 1;
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* User Guide */
@@ -201,10 +403,18 @@ footer .alignTextIcon--dim {
 .userGuide aside {
   display: flex;
   align-items: center;
-  background-color: #E5E5E5;
+  box-shadow: 0px 3px 6px 3px #eaeaea;
+  background-color: #f6F6F6;
   margin-top: 1rem;
   padding: 0.5rem 0;
   border-radius: 1.5rem;
+  cursor: pointer;
+}
+.userGuide aside:hover {
+  background-color: #f5edff;
+}
+.userGuide aside:hover > .fa-mobile-alt, .userGuide aside:hover > .fa-list-ul, .userGuide aside:hover > .fa-store {
+  color: #9356DC;
 }
 .userGuide p {
   margin: -0.5rem;
@@ -212,6 +422,7 @@ footer .alignTextIcon--dim {
   justify-content: center;
   align-items: center;
   background-color: #9356DC;
+  color: white;
   border-radius: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -228,12 +439,21 @@ footer .alignTextIcon--dim {
 .restaurant {
   padding: 2rem 1rem;
   background-color: #f6F6F6;
+  /*&__new {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #99e2d0;
+      color: #39a98e;
+      font-weight: bold;
+      padding: .5rem;
+  }*/
   /* TODO: demander comment center l'image et box-siting */
 }
 .restaurant article {
   border-radius: 1rem;
   margin-bottom: 1.2rem;
-  box-shadow: 0px 3px 6px 3px #E5E5E5;
+  box-shadow: 0px 3px 6px 3px #eaeaea;
 }
 .restaurant__containerImg {
   height: 10.5rem;
@@ -256,6 +476,14 @@ footer .alignTextIcon--dim {
   line-height: 0.1;
 }
 
+/*home loading-spinner*/
+@media screen and (min-width: 765px) {
+  .load {
+    width: 25.5vh;
+    height: 18vh;
+  }
+}
+
 /* home USER GUIDE */
 @media screen and (min-width: 765px) {
   .desktop-flexbox {
@@ -265,7 +493,7 @@ footer .alignTextIcon--dim {
     flex-basis: 50%;
     background-color: white;
     justify-content: center;
-    border-right: solid 1px #E5E5E5;
+    border-right: solid 1px #eaeaea;
   }
   .desktop-flexbox .userGuide {
     flex-basis: 50%;
@@ -279,7 +507,7 @@ footer .alignTextIcon--dim {
 /* home RESTAURANT */
 @media screen and (min-width: 765px) {
   .restaurant {
-    border-top: solid 1px #E5E5E5;
+    border-top: solid 1px #eaeaea;
     padding-left: 4rem;
     padding-right: 4rem;
   }

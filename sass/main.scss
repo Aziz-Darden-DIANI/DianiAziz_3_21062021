@@ -1,6 +1,8 @@
 
 @import "./utils/_variables.scss";
 @import "./utils/_mixin.scss";
+@import "./utils/animation";
+@import "./components/loadingSpinner";
 @import "./base/_typography.scss";
 @import "./base/_base.scss";
 @import "./components/_button.scss";
