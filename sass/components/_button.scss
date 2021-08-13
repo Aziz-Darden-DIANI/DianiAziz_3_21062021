@@ -3,7 +3,7 @@
     position: relative;
     bottom: 2.5rem;
 }
-button {
+.btn {
     @include btn();
     min-width: 9rem;
     @include btn--hover;

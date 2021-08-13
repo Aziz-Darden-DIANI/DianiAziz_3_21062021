@@ -20,11 +20,15 @@
     background-color: $colour;
     background: linear-gradient($deg, $primary-color, $secondary-color);
     border-radius: 2rem;
+    padding: 1rem 0.8rem;
+    text-align: center;
     cursor: pointer;
     border: none;
-    color: white;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+    a {
+        text-decoration: none;
+    }
 }
 @mixin btn--hover() {
     &::after {

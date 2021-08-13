@@ -97,7 +97,7 @@ h2, h3, h4, h5, h6 {
   font-family: "Roboto-Regular", Arial, "Arial Narrow", "Arial black", sans-serif;
 }
 
-p, .restaurant__new {
+p, .restaurant__new, .description--btnTxtSize {
   font-family: "Roboto-Regular", Arial, "Arial Narrow", "Arial black", sans-serif;
 }
 
@@ -118,18 +118,22 @@ body {
   bottom: 2.5rem;
 }
 
-button {
+.btn {
   background-color: #FF79DA;
   background: linear-gradient(-5deg, #9356DC, #FF79DA);
   border-radius: 2rem;
+  padding: 1rem 0.8rem;
+  text-align: center;
   cursor: pointer;
   border: none;
-  color: white;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   min-width: 9rem;
 }
-button::after {
+.btn a {
+  text-decoration: none;
+}
+.btn::after {
   content: "";
   position: absolute;
   border-radius: 2rem;
@@ -142,7 +146,7 @@ button::after {
   opacity: 0;
   transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
 }
-button:hover::after {
+.btn:hover::after {
   opacity: 1;
   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.5);
 }
@@ -383,20 +387,24 @@ footer .alignTextIcon--dim {
   margin-bottom: 1.5rem;
 }
 .description--btnTxtSize {
-  font-size: 1.1em;
+  color: white;
 }
-.description button {
+.description .btn {
   background-color: #FF79DA;
   background: linear-gradient(-5deg, #9356DC, #FF79DA);
   border-radius: 2rem;
+  padding: 1rem 0.8rem;
+  text-align: center;
   cursor: pointer;
   border: none;
-  color: white;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   min-width: 12.5rem;
 }
-.description button::after {
+.description .btn a {
+  text-decoration: none;
+}
+.description .btn::after {
   content: "";
   position: absolute;
   border-radius: 2rem;
@@ -409,7 +417,7 @@ footer .alignTextIcon--dim {
   opacity: 0;
   transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
 }
-.description button:hover::after {
+.description .btn:hover::after {
   opacity: 1;
   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.5);
 }
